@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for path in $(ls ../data/*.txt)
+do
+  python solve.py ${path} > ${path##*/}
+done

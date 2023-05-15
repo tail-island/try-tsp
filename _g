@@ -1,0 +1,11 @@
+#!/bin/sh
+
+for i in 8 16 32
+do
+  python generate_circle_problem.py ${i} > ./data/${i}-0.txt
+
+  for j in $(seq 1 9)
+  do
+    python generate_problem.py ${i} > ./data/${i}-${j}.txt
+  done
+done

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+for problem_path in $(ls ../data/*.txt)
+do
+  route_path=${problem_path##*/}
+  png_path=${route_path%.*}.png
+
+  python ../plot_answer.py ${problem_path} ${route_path} ${png_path}
+done
